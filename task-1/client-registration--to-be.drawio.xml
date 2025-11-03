@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="27kctRKBvbuEl19eptIp">
+    <mxGraphModel dx="1473" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B5IjWxpGKVVOnl748M93-1" value="Пациент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="180" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-2" value="CRM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-3" value="&lt;br&gt;PostgreSQL (зашифр.)" style="shape=cylinder3;whiteSpace=wrap;html=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="270" y="30" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-4" value="Ресепшен" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="180" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="B5IjWxpGKVVOnl748M93-1" target="B5IjWxpGKVVOnl748M93-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-6" value="Запись&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="B5IjWxpGKVVOnl748M93-5">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint x="-48" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" target="B5IjWxpGKVVOnl748M93-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="180" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-8" value="Зашифрованные данные" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="B5IjWxpGKVVOnl748M93-7">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint x="-1" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="B5IjWxpGKVVOnl748M93-2" target="B5IjWxpGKVVOnl748M93-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B5IjWxpGKVVOnl748M93-10" value="Подтверждение" style="edgeLabel;html=1;align=center;verticalAlign=middle;" vertex="1" connectable="0" parent="B5IjWxpGKVVOnl748M93-9">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint x="-48" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

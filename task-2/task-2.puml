@@ -1,0 +1,80 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+title Целевая архитектура системы "Медикаменте" — Контекстный уровень (To-Be)
+
+Person(patient, "Пациент", "Пользуется сервисами центра")
+Person(doctor, "Врач", "Работает с мед. данными")
+Person(receptionist, "Администратор", "Регистрирует и обслуживает пациентов")
+Person(cashier, "Кассир", "Принимает оплату")
+Person(accountant, "Бухгалтер", "Финансовая отчётность")
+Person(warehouse_keeper, "Кладовщик", "Управление ТМЦ")
+Person(b_analyst, "Аналитик", "Работает с отчётами и данными")
+
+System_Ext(lab_system, "Лаборатория", "Внешняя мед. лаборатория")
+System_Ext(payment_gateway, "Платежный шлюз", "Эквайринг")
+System_Ext(sms_service, "SMS-сервис", "")
+System_Ext(email_service, "Email-сервис", "")
+
+System_Boundary(medicamente, "Медицинский центр") {
+  
+  System(patient_portal, "Портал пациента", "Личный кабинет, история записей")
+  System(staff_portal, "Портал сотрудника", "Доступ к рабочим функциям")
+  System(crm_system, "CRM", "Работа с клиентами")
+
+  System(privacy_gateway, "Privacy Gateway", "Обеспечение приватности:\n- Шифрование\n- Псевдонимизация\n- Тегирование\n- Контроль доступа\n- Аудит")
+
+  System(core_medical_system, "Медицинская система", "Карточки, записи, анализы")
+
+  System(data_catalog, "Data Catalog", "Метаданные, теги, сроки хранения")
+
+  System(bi_platform, "BI/ML аналитика", "Анализ, ML, отчёты")
+
+  System(audit_system, "Система аудита", "Логирование, контроль доступа, алерты")
+
+  System_Boundary(onec, "1С") {
+    System(onec_accounting, "1С:Бухгалтерия", "")
+    System(onec_warehouse, "1С:Склад", "")
+  }
+
+  System(notification_system, "Система уведомлений", "")
+}
+
+' Пользователи
+Rel(patient, patient_portal, "Просмотр, запись", "HTTPS")
+Rel(patient_portal, privacy_gateway, "Персональные данные", "TLS")
+Rel(privacy_gateway, core_medical_system, "Фильтрация, валидация", "TLS")
+
+Rel(doctor, staff_portal, "Работа с карточками", "HTTPS")
+Rel(staff_portal, privacy_gateway, "Мед. данные по ролям", "TLS")
+
+Rel(receptionist, staff_portal, "Регистрация, запись", "HTTPS")
+Rel(cashier, staff_portal, "Работа с оплатами", "HTTPS")
+Rel(accountant, onec_accounting, "Финансовая работа", "HTTPS")
+Rel(warehouse_keeper, onec_warehouse, "Учёт ТМЦ", "HTTPS")
+
+' Приватность и безопасность
+Rel(privacy_gateway, audit_system, "Логи доступа", "TLS")
+Rel(core_medical_system, audit_system, "Системные события", "TLS")
+Rel(bi_platform, audit_system, "Запросы и действия", "TLS")
+
+Rel(privacy_gateway, data_catalog, "Классификация данных", "TLS")
+Rel(core_medical_system, data_catalog, "Метаданные", "TLS")
+
+' Аналитика
+Rel(privacy_gateway, bi_platform, "Обезличенные данные", "TLS")
+Rel(b_analyst, bi_platform, "Доступ к аналитике", "HTTPS")
+
+' Интеграции
+Rel(core_medical_system, lab_system, "Результаты анализов", "HTTPS")
+Rel(core_medical_system, onec_accounting, "Финансовые данные", "HTTPS")
+Rel(core_medical_system, onec_warehouse, "Инвентаризация", "HTTPS")
+Rel(onec_accounting, payment_gateway, "Платежи", "HTTPS")
+
+' CRM и уведомления
+Rel_D(core_medical_system, crm_system, "Профили пациентов", "TLS")
+Rel(core_medical_system, notification_system, "Уведомления", "HTTPS")
+Rel(notification_system, sms_service, "SMS", "HTTPS")
+Rel(notification_system, email_service, "Email", "HTTPS")
+
+Rel(patient_portal, payment_gateway, "Онлайн-оплата", "HTTPS")
+@enduml
