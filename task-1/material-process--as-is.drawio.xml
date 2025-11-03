@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
+  <diagram name="Page-1" id="IHqAxxAfIDpJom9lOxDE">
+    <mxGraphModel dx="1473" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-1" value="Медицинский&#xa;специалист" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-2" value="Сотрудник&#xa;склада" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-3" value="1С:Торговля&#xa;и склад" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-4" value="Ручной ввод" style="shape=note;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="190" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-5" value="" style="endArrow=classic;html=1;rounded=1;" edge="1" parent="1" source="hbqbnFEj_sM_e4XgxLxY-1" target="hbqbnFEj_sM_e4XgxLxY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-6" value="Заявка на материалы" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;" vertex="1" connectable="0" parent="hbqbnFEj_sM_e4XgxLxY-5">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="16" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-7" value="" style="endArrow=classic;html=1;rounded=1;" edge="1" parent="1" source="hbqbnFEj_sM_e4XgxLxY-2" target="hbqbnFEj_sM_e4XgxLxY-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-8" value="Материалы" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;" vertex="1" connectable="0" parent="hbqbnFEj_sM_e4XgxLxY-7">
+          <mxGeometry x="0.2" y="-1" relative="1" as="geometry">
+            <mxPoint x="16" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-9" value="" style="endArrow=classic;html=1;rounded=1;" edge="1" parent="1" source="hbqbnFEj_sM_e4XgxLxY-2" target="hbqbnFEj_sM_e4XgxLxY-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-10" value="1С:Бухгалтерия&#xa;предприятия" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-11" value="" style="endArrow=classic;html=1;rounded=1;" edge="1" parent="1" source="hbqbnFEj_sM_e4XgxLxY-3" target="hbqbnFEj_sM_e4XgxLxY-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-12" value="Данные о ТМЦ" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;" vertex="1" connectable="0" parent="hbqbnFEj_sM_e4XgxLxY-11">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="49" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hbqbnFEj_sM_e4XgxLxY-13" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="hbqbnFEj_sM_e4XgxLxY-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="180" as="sourcePoint" />
+            <mxPoint x="400" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
